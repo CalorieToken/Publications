@@ -30,7 +30,6 @@ Use the whitepaper and roadmap links above for current reading. For a fixed quot
 
 - [Whitepaper v4.1, dated PDF](releases/2026-09-08/CalorieToken-Whitepaper-v4.1.pdf)
 - [Roadmap, dated Markdown edition](releases/2026-09-08/CalorieToken-Roadmap-2026-09-08.md)
-- [Whitepaper editable source](source/CalorieToken_Whitepaper_v4.1_2026-09-08.docx)
 - [File checksums](SHA256SUMS)
 - [Publication and version policy](PUBLICATION_POLICY.md)
 - [Suggest a factual correction](CONTRIBUTING.md)
