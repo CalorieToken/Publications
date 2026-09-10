@@ -25,7 +25,7 @@ Historical statements describe what was proposed or explored at the time. Their 
 
 Earlier CalorieApp work explored Testnet wallet and mobile interfaces alongside food-related ideas. The [CalorieAppTestnet repository](https://github.com/CalorieToken/CalorieAppTestnet) is a historical technical source. It should be read separately from the [current CalorieApp source](https://github.com/CalorieToken/CalorieApp).
 
-Wallet, DEX, NFT, merchant and corporate concepts in earlier material are not a description of the current food webapp. Historical illustrations and videos may show those previous designs. The [roadmap archive](archive/README.md) preserves the distinction.
+Wallet, DEX, NFT, merchant and corporate concepts in earlier material are not a description of the current food webapp. Historical illustrations and videos may show those previous designs. The [roadmap archive](https://github.com/CalorieToken/Publications/blob/main/roadmap/archive/README.md) preserves the distinction.
 
 ## 3. Food webapp
 
@@ -49,7 +49,7 @@ The remaining publication work is to connect the current whitepaper and this exp
 
 Completion of this phase means the important visitor routes and documentation agree about what is available. It does not imply that every historical page has been redesigned or every third-party description has been rewritten.
 
-The September continuation adds shared page chrome, localised UI, clearer food-search recovery, a small USDA reference selection and a public informational Community Voting Hub. The latest candidate still requires WordPress installation and live acceptance; complete historical CMS translations remain open. No vote, proposal submission or reward programme is active. See the [dated scope and verification record](../status/2026-09-10.md).
+The September continuation adds shared page chrome, localised UI, clearer food-search recovery, a small USDA reference selection and a public informational Community Voting Hub. The latest candidate still requires WordPress installation and live acceptance; complete historical CMS translations remain open. No vote, proposal submission or reward programme is active. See the [dated scope and verification record](https://github.com/CalorieToken/Publications/blob/main/status/2026-09-10.md).
 
 ## 6. Community preview
 
@@ -71,11 +71,11 @@ Any broader integration requires its own assessment of usefulness, feasibility, 
 
 ## Reading history and updates
 
-- [Current whitepaper](../whitepaper/CalorieToken-Whitepaper.pdf)
-- [Whitepaper archive](../whitepaper/archive/README.md)
-- [Historical roadmap material](archive/README.md)
-- [Dated copy of this roadmap](../releases/2026-09-10/CalorieToken-Roadmap-2026-09-10.md)
-- [Publication policy](../PUBLICATION_POLICY.md)
-- [Legal and rights information](../legal/README.md)
+- [Current whitepaper](https://github.com/CalorieToken/Publications/blob/main/whitepaper/CalorieToken-Whitepaper.pdf)
+- [Whitepaper archive](https://github.com/CalorieToken/Publications/blob/main/whitepaper/archive/README.md)
+- [Historical roadmap material](https://github.com/CalorieToken/Publications/blob/main/roadmap/archive/README.md)
+- [Dated copy of this roadmap](https://github.com/CalorieToken/Publications/blob/main/releases/2026-09-10/CalorieToken-Roadmap-2026-09-10.md)
+- [Publication policy](https://github.com/CalorieToken/Publications/blob/main/PUBLICATION_POLICY.md)
+- [Legal and rights information](https://github.com/CalorieToken/Publications/blob/main/legal/README.md)
 
 The earlier available-preview and sign-in descriptions are based on the project's website and accepted testing recorded by 8 September 2026. The 10 September additions have separate local/repository evidence and have not been accepted by the owner on the live app. They are not an independent audit certificate. Statuses will be updated when the underlying work or evidence changes.

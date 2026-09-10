@@ -6,7 +6,7 @@
 | CalorieApp | https://calorietoken.net/index.php/calorieapp/ |
 | Whitepaper page | https://calorietoken.net/index.php/whitepaper/ |
 | Roadmap summary | https://calorietoken.net/index.php/roadmap/ |
-| Buying guide | https://calorietoken.net/index.php/how-to-buy-calorie/ |
+| CAL & Crypto: exchange links and buying guide | https://calorietoken.net/index.php/how-to-buy-calorie/ |
 | Contact and current community channels | https://calorietoken.net/index.php/contact/ |
 
 Use these existing website addresses for general references. A new document or visual design does not require changing their slugs. Current repository reading paths are [whitepaper/CalorieToken-Whitepaper.pdf](../whitepaper/CalorieToken-Whitepaper.pdf) and [roadmap/README.md](../roadmap/README.md). Use dated release paths for references to a particular edition.
