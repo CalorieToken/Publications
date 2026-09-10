@@ -16,7 +16,7 @@ Project documentation for CalorieToken and CalorieApp: current reading copies, d
 
 ## Current implementation and acceptance
 
-The [dated status record](status/2026-09-10.md) covers the website update, a small USDA reference selection, synchronized UI language, search recovery and an informational Voting Hub. No voting/proposal function or own exchange execution is active. The latest WordPress package still needs installation and live owner acceptance; historical content translation is incomplete in several languages.
+The [dated status record](status/2026-09-10.md) covers the website update, a small USDA reference selection, synchronised UI language, search recovery and an informational Voting Hub. No voting/proposal function or own exchange execution is active. The latest WordPress package still needs installation and live owner acceptance; historical content translation is incomplete in several languages.
 
 ## Project and contact
 

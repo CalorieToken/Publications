@@ -49,7 +49,7 @@ The remaining publication work is to connect the current whitepaper and this exp
 
 Completion of this phase means the important visitor routes and documentation agree about what is available. It does not imply that every historical page has been redesigned or every third-party description has been rewritten.
 
-The September continuation adds shared page chrome, localized UI, clearer food-search recovery, a small USDA reference selection and a public informational Community Voting Hub. The latest candidate still requires WordPress installation and live acceptance; complete historical CMS translations remain open. No vote, proposal submission or reward programme is active. See the [dated scope and verification record](../status/2026-09-10.md).
+The September continuation adds shared page chrome, localised UI, clearer food-search recovery, a small USDA reference selection and a public informational Community Voting Hub. The latest candidate still requires WordPress installation and live acceptance; complete historical CMS translations remain open. No vote, proposal submission or reward programme is active. See the [dated scope and verification record](../status/2026-09-10.md).
 
 ## 6. Community preview
 
