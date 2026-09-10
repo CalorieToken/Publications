@@ -1,6 +1,6 @@
 # Legal, rights and publication information
 
-**Document date: 8 September 2026.** This page explains this repository's publication scope and links to the website's applicable notices. It does not replace them or certify legal compliance.
+**Document date: 10 September 2026.** This page explains this repository's publication scope and links to the website's applicable notices. It does not replace them or certify legal compliance.
 
 ## Operator and contact
 
@@ -35,3 +35,11 @@ For applicable whitepaper processes and treatment of superseded editions, consul
 ## Public records and private evidence
 
 This repository can reference verified public registration or publication records. Signed contracts, identity documents, signatures, private correspondence, legal advice, account data and confidential assessments should not be uploaded here. Requests about rights or personal information can be sent through the public contact route without putting private evidence in a public issue.
+
+## Current integration disclosures
+
+The [September status record](../status/2026-09-10.md) separates the food app from the website's external CAL/XRP links, AllChainBridge/SWFT interface, optional Testnet guide and local help. CAL is temporarily unavailable in SWFT according to the operator. There is no own order-execution engine, active community vote, proposal submission or current reward programme in this release.
+
+The WordPress update prepares current V2 references and factual integration additions for the existing Privacy/Terms pages, retaining operator, consumer-rights and third-party-rights wording. Publication depends on installing that package and matching the expected original source. This is not proof of completed provider-transfer, backup-retention, special-category, linguistic or legal review. Durable-data and privacy-release gates remain applicable before wider onboarding.
+
+Xaman signing does not establish that an activity falls outside MiCA. The European Commission's answer published in [ESMA Q&A 2671](https://www.esma.europa.eu/print/pdf/node/222469) explains that fully decentralised status is assessed case by case by the competent authorities. This project makes no such confirmed exemption or worldwide permission claim.

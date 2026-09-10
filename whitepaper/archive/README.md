@@ -4,6 +4,7 @@ These editions are superseded for current product descriptions. Their original w
 
 | Edition printed in the document | Document date | Source | Archive state |
 | --- | --- | --- | --- |
+| 4.1 | 8 September 2026 | [Dated PDF](../../releases/2026-09-08/CalorieToken-Whitepaper-v4.1.pdf) | Previous published edition retained unchanged |
 | 3.1C | 19 February 2026 | [Archived PDF](CalorieToken-Whitepaper-v3.1C.pdf) | Exact existing public PDF retained; hash in the repository checksums |
 | 3.1 | 9 April 2023 | [Original website PDF](https://calorietoken.net/wp-content/uploads/2023/09/CalorieToken-Whitepaper-V3.pdf) | Source confirmed; no repository copy is claimed yet |
 
