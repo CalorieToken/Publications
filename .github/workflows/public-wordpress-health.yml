@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - ".github/workflows/wordpress-reachability.yml"
+      - ".github/workflows/public-wordpress-health.yml"
   workflow_dispatch:
   schedule:
     - cron: "7,37 * * * *"
