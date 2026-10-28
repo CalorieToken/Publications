@@ -8,7 +8,8 @@ on:
       - ".github/workflows/public-wordpress-health.yml"
   workflow_dispatch:
   schedule:
-    - cron: "7,37 * * * *"
+    # GitHub can delay/skip a scheduled run; the monitor must treat stale runs as unknown.
+    - cron: "11,41 * * * *"
 
 permissions:
   contents: read
