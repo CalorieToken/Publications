@@ -1,0 +1,114 @@
+name: One-time live CalorieApp backend to WordPress connectivity diagnostic
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'diagnostics/backend-wordpress-connectivity.trigger'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  backend-wordpress-exchange:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Run one synthetic invalid-code exchange through the existing live backend
+        env:
+          BACKEND_BASE: https://calorieapp-backend-rvul.onrender.com
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import sys
+          import urllib.error
+          import urllib.request
+
+          base = os.environ["BACKEND_BASE"].rstrip("/")
+          headers = {
+              "Content-Type": "application/json",
+              "Accept": "application/json",
+              "Origin": "https://calorietoken.net",
+              "Referer": "https://calorietoken.net/calorieapp/",
+          }
+
+          def post(path, payload):
+              request = urllib.request.Request(
+                  base + path,
+                  data=json.dumps(payload).encode("utf-8"),
+                  headers=headers,
+                  method="POST",
+              )
+              try:
+                  with urllib.request.urlopen(request, timeout=18) as response:
+                      return response.status, response.read(4096)
+              except urllib.error.HTTPError as error:
+                  return error.code, error.read(4096)
+              except Exception as error:
+                  print("client_request_error=" + type(error).__name__)
+                  return None, b""
+
+          def body_json(raw):
+              try:
+                  value = json.loads(raw.decode("utf-8", "replace"))
+                  return value if isinstance(value, dict) else {}
+              except Exception:
+                  return {}
+
+          start_status, start_raw = post("/api/identity/login/start", {"locale": "en"})
+          print("login_start_status=" + str(start_status))
+          start_data = body_json(start_raw)
+          if start_status != 200:
+              detail = start_data.get("detail", "no-json-detail")
+              if not isinstance(detail, str):
+                  detail = "non-string-detail"
+              print("login_start_detail=" + detail[:100])
+              sys.exit(1)
+
+          state = start_data.get("state")
+          if not isinstance(state, str) or len(state) < 32:
+              print("login_start_result=invalid-state-response")
+              sys.exit(1)
+          print("temporary_state_created=true")
+          print("state_length=" + str(len(state)))
+          print("expires_at=" + str(start_data.get("expires_at", "unknown"))[:40])
+
+          # Deliberately not a real WordPress code and not the backend-code prefix.
+          callback_status, callback_raw = post(
+              "/api/identity/callback",
+              {"code": "diagnostic-invalid-code-20261029", "state": state},
+          )
+          callback_data = body_json(callback_raw)
+          detail = callback_data.get("detail", "no-json-detail")
+          detail_code = detail.get("code") if isinstance(detail, dict) else None
+          detail_text = detail if isinstance(detail, str) else ""
+          print("callback_status=" + str(callback_status))
+          print("callback_detail=" + (detail_text[:120] if detail_text else str(detail_code or "non-string-detail")[:120]))
+
+          if callback_status is None:
+              classification = "PUBLIC_BACKEND_CALLBACK_REQUEST_FAILED"
+          elif callback_status == 400 and detail_text == "Authorization code exchange rejected":
+              classification = "BACKEND_REACHED_WORDPRESS_EXCHANGE_AND_WORDPRESS_REJECTED_INVALID_CODE"
+          elif callback_status == 502 and detail_text == "WordPress bridge exchange failed":
+              classification = "BACKEND_OUTBOUND_WORDPRESS_TRANSPORT_OR_TLS_ERROR"
+          elif callback_status == 502 and detail_code == "wordpress_bridge_html_response":
+              classification = "WORDPRESS_HOST_REACHED_BUT_RETURNED_HTML_CHALLENGE"
+          elif callback_status in (429, 502, 503, 504) and detail_text == "WordPress bridge temporarily unavailable":
+              classification = "WORDPRESS_ENDPOINT_RETURNED_TEMPORARY_STATUS"
+          elif callback_status == 500 and detail_text == "WordPress bridge secret is not configured":
+              classification = "BACKEND_BRIDGE_SECRET_CONFIGURATION_MISSING"
+          elif callback_status == 502 and detail_text == "Invalid bridge exchange response":
+              classification = "WORDPRESS_RESPONDED_WITH_INVALID_JSON"
+          elif callback_status == 502 and detail_text == "Bridge identity claims were malformed":
+              classification = "WORDPRESS_RESPONDED_WITH_INVALID_CLAIMS"
+          else:
+              classification = "OTHER_CALLBACK_RESULT"
+          print("classification=" + classification)
+          print("real_identity_code_used=false")
+          print("state_or_handoff_token_logged=false")
+          print("account_creation_attempted=false")
+          if callback_status is None:
+              sys.exit(1)
+          PY
